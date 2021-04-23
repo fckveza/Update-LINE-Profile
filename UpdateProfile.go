@@ -98,8 +98,8 @@ func ChangeCoverVideo(AuthToken string, Msg_Id string) {
 }
 
 func main() {
-	ChangeProfilePicture("TOKENMU", "MSG_ID")
-	ChangeProfileVideo("TOKENMU", "MSG_ID")
-	ChangeCoverPicture("TOKENMU", "MSG_ID")
-	ChangeProfileVideo("TOKENMU", "MSG_ID")
+	ChangeProfilePicture("TOKENMU", "MSG_ID MU COK")
+	ChangeProfileVideo("TOKENMU", "MSG_ID MU COK")
+	ChangeCoverPicture("TOKENMU", "MSG_ID MU COK")
+	ChangeProfileVideo("TOKENMU", "MSG_ID MU COK")
 }
