@@ -1,4 +1,4 @@
-# ![VHtear](https://vhtear.com/static/assets/img/brand/favicon.ico) Update profile
+# ![VHtear](https://vhtear.com/static/assets/img/brand/favicon.ico) Update LINE profile
 
 ----
 
