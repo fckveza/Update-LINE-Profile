@@ -65,7 +65,7 @@ func ChangeCoverPicture(AuthToken string, Msg_Id string) {
     "x-lal": "en_id"
   }`
 	requestBody := strings.NewReader(OBS_Header)
-	res, err := http.Post(hosts+"change_cover_image="+apikey, "application/json; charset=UTF-8", requestBody)
+	res, err := http.Post(hosts+"change_cover_picture="+apikey, "application/json; charset=UTF-8", requestBody)
 	if err != nil {
 		fmt.Println("Gagal")
 		return
