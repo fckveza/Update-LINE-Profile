@@ -36,7 +36,7 @@ def ChangeProfileVideo(msg_id):
 
 def ChangeCoverImage(msg_id):
   OBS_HEADER.update({"Msg_Id": msg_id})
-  sagne = requests.post(hostVH+"change_cover_image=%s" % apikey, json=OBS_HEADER)
+  sagne = requests.post(hostVH+"change_cover_picture=%s" % apikey, json=OBS_HEADER)
   if sagne.status_code == 200:
      tH = sagne.json()
      print(tH) 
