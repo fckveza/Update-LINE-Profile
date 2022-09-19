@@ -99,7 +99,7 @@ func ChangeCoverVideo(AuthToken string, Msg_Id string) {
 
 func DisableLetterSealing(AuthToken string) {
 	//Header sesuain dengan header scriptmu
-	OBS_Header := `{
+	Headers := `{
     "AuthToken": "` + AuthToken + `",
     "Msg_Id": "",
     "Device": "ANDROID",
@@ -108,7 +108,7 @@ func DisableLetterSealing(AuthToken string) {
     "System_Ver": "10.0.2",
     "x-lal": "en_US"
   }`
-	requestBody := strings.NewReader(OBS_Header)
+	requestBody := strings.NewReader(Headers)
 	res, err := http.Post(hosts+"rm_LetterSealing="+apikey, "application/json; charset=UTF-8", requestBody)
 	if err != nil {
 		fmt.Println("Gagal")
