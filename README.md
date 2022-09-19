@@ -10,6 +10,7 @@ PAGES
         - changeCoverVideo
         - changeProfilePicture
         - changeProfileVideo
+        - disableLetterSealing
 
 ## Requirement
 
