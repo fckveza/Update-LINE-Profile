@@ -4,53 +4,53 @@ hostVH = "https://api.vhtear.com/"
 apikey = "PREMIUMKEY" #Chat me on whatsapp https://wa.me/+628123552767
 
 #Header sesuai'in dengan scripmu
-OBS_HEADER = {
+Headers = {
   "AuthToken": "tokenMu",
   "Msg_Id": "",
-  "Device": "DESKTOPWIN",
-  "Version": "6.7.0",
-  "System_Name": "VH-PC",
-  "System_Ver": "10.0.14",
-  "x-lal": "en_id"
+  "Device": "ANDROID",
+  "Version": "11.10.2",
+  "System_Name": "Android OS",
+  "System_Ver": "10.0.2",
+  "x-lal": "en_US"
 }
 
 def ChangeProfilePicture(msg_id):
-  OBS_HEADER.update({"Msg_Id": msg_id})
-  sagne = requests.post(hostVH+"change_profile_picture=%s" % apikey, json=OBS_HEADER)
+  Headers.update({"Msg_Id": msg_id})
+  sagne = requests.post(hostVH+"change_profile_picture=%s" % apikey, json=Headers)
   if sagne.status_code == 200:
      tH = sagne.json()
      print(tH) 
      print("Success update profile picture") 
 
-#ChangePicture("13936590569300")
-
 def ChangeProfileVideo(msg_id):
-  OBS_HEADER.update({"Msg_Id": msg_id})
-  sagne = requests.post(hostVH+"change_profile_video=%s" % apikey, json=OBS_HEADER)
+  Headers.update({"Msg_Id": msg_id})
+  sagne = requests.post(hostVH+"change_profile_video=%s" % apikey, json=Headers)
   if sagne.status_code == 200:
      tH = sagne.json()
      print(tH) 
      print("Success update profile video") 
-     
-#ChangeProfileVideo("13936590569300")
 
 def ChangeCoverImage(msg_id):
-  OBS_HEADER.update({"Msg_Id": msg_id})
-  sagne = requests.post(hostVH+"change_cover_picture=%s" % apikey, json=OBS_HEADER)
+  Headers.update({"Msg_Id": msg_id})
+  sagne = requests.post(hostVH+"change_cover_picture=%s" % apikey, json=Headers)
   if sagne.status_code == 200:
      tH = sagne.json()
      print(tH) 
      print("Success update cover picture") 
-     
-#ChangeCoverVideo("13936590569300")
 
 def ChangeCoverImage(msg_id):
-  OBS_HEADER.update({"Msg_Id": msg_id})
-  sagne = requests.post(hostVH+"change_cover_video=%s" % apikey, json=OBS_HEADER)
+  Headers.update({"Msg_Id": msg_id})
+  sagne = requests.post(hostVH+"change_cover_video=%s" % apikey, json=Headers)
   if sagne.status_code == 200:
      tH = sagne.json()
      print(tH) 
      print("Success update cover video") 
      
-#ChangeCoverVideo("13936590569300")
+def DisableLetterSealing():
+  sagne = requests.post(hostVH+"rm_LetterSealing=%s" % apikey, json=Headers)
+  if sagne.status_code == 200:
+     tH = sagne.json()
+     print(tH) 
+     print("Disable LetterSealing Success") 
+     
          
